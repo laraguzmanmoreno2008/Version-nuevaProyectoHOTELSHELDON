@@ -71,7 +71,6 @@ def obtener_fechas_ocupadas():
     return fechas_ocupadas
 
 fechas_ocupadas = {}
-# Precios de habitaciones (simulación)
 PRECIOS_HABITACIONES = {
     "Individual": 100,
     "Doble": 150,
@@ -82,7 +81,6 @@ PRECIOS_HABITACIONES = {
     "Servicio Estandar": 120
 }
 
-# Fechas ocupadas (simulación)
 fechas_ocupadas = {
     "Individual": [datetime(2025, 11, 15).date(), datetime(2025, 11, 16).date()],
     "Doble": [datetime(2025, 11, 20).date(), datetime(2025, 11, 21).date()],
@@ -94,15 +92,13 @@ fechas_ocupadas = {
 }
 
 def reserva(page: ft.Page):
-    # Colores del tema ultra moderno
-    COLOR_PRIMARIO = "#625956"  # Slate 900
-    COLOR_SECUNDARIO = "#475569"  # Slate 600
-    COLOR_ACENTO = "#d89c6c"  # Blue 500
-    COLOR_FONDO = "#ede8e4"  # Slate 50
-    COLOR_TEXTO = "#152540"  # Slate 950
+    COLOR_PRIMARIO = "#625956" 
+    COLOR_SECUNDARIO = "#475569"  
+    COLOR_ACENTO = "#d89c6c"  
+    COLOR_FONDO = "#ede8e4" 
+    COLOR_TEXTO = "#152540" 
     COLOR_CARD = "#edebeb"
 
-    # Selectores de fecha
     check_in_picker = ft.DatePicker(
         first_date=datetime(2025, 1, 1),
         last_date=datetime(2027, 12, 31)
@@ -112,7 +108,6 @@ def reserva(page: ft.Page):
         last_date=datetime(2027, 12, 31)
     )
 
-    # Campos modernos
     check_in_field = ft.TextField(
         label="Fecha de ingreso",
         read_only=True,
@@ -130,7 +125,6 @@ def reserva(page: ft.Page):
         border_radius=12,
     )
 
-    # Botones modernos
     check_in_button = ft.IconButton(
         icon=ft.Icons.CALENDAR_TODAY,
         on_click=lambda _: page.open(check_in_picker),
@@ -472,5 +466,6 @@ def reserva(page: ft.Page):
     nombre.on_change = lambda e: actualizar_resumen()
     telefono.on_change = lambda e: actualizar_resumen()
     email.on_change = lambda e: actualizar_resumen()
+
 
     return main_container
