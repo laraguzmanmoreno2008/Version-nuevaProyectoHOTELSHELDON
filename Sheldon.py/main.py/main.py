@@ -7,13 +7,13 @@ from paginas.reservas import reserva
 
 
 def main(page: ft.Page):
-    # Colores del tema ultra moderno
-    COLOR_PRIMARIO = "#625956"  # Slate 900 - Muy oscuro
-    COLOR_SECUNDARIO = "#475569"  # Slate 600 - Medio
-    COLOR_ACENTO = "#d89c6c"  # Blue 500 - Azul vibrante
-    COLOR_FONDO = "#ede8e4"  # Slate 50 - Casi blanco
-    COLOR_TEXTO = "#152540"  # Slate 950 - Negro azulado
-    COLOR_CARD = "#edebeb"  # Blanco puro
+  
+    COLOR_PRIMARIO = "#625956"  
+    COLOR_SECUNDARIO = "#475569" 
+    COLOR_ACENTO = "#d89c6c" 
+    COLOR_FONDO = "#ede8e4"  
+    COLOR_TEXTO = "#152540" 
+    COLOR_CARD = "#edebeb" 
     
     page.title = "Hotel Sheldon"
     page.window.maximized = True
@@ -25,8 +25,7 @@ def main(page: ft.Page):
     selected_section.current = ft.Text("Inicio")
 
     main_content = ft.Column([], expand=True)
-    
-    # Logo minimalista
+   
     logo = ft.Container(
         content=ft.Row([
             ft.Container(
@@ -106,7 +105,7 @@ def main(page: ft.Page):
 
     go_to("inicio")
 
-    # Navbar ultra moderna - flotante y minimalista
+
     nav_container = ft.Container(
         content=ft.Container(
             content=ft.Row([
@@ -137,6 +136,7 @@ def main(page: ft.Page):
             alignment=ft.alignment.top_center
         )
     )
+
 
 
 ft.app(target=main)
