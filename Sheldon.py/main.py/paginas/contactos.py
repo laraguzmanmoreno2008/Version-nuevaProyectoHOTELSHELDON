@@ -2,12 +2,11 @@ import flet as ft
 
 
 def contactos(page):
-    # Colores del tema ultra moderno
-    COLOR_PRIMARIO = "#625956"  # Slate 900
-    COLOR_SECUNDARIO = "#475569"  # Slate 600
-    COLOR_ACENTO = "#d89c6c"  # Blue 500
-    COLOR_FONDO = "#ede8e4"  # Slate 50
-    COLOR_TEXTO = "#152540"  # Slate 950
+    COLOR_PRIMARIO = "#625956"  
+    COLOR_SECUNDARIO = "#475569" 
+    COLOR_ACENTO = "#d89c6c"  
+    COLOR_FONDO = "#ede8e4"  
+    COLOR_TEXTO = "#152540" 
     COLOR_CARD = "#edebeb"
 
     contactos_info = [
@@ -71,17 +70,17 @@ def contactos(page):
     return ft.Container(
         expand=True,
         content=ft.Stack([
-            # Overlay oscuro
+            
             ft.Container(
                 bgcolor=ft.Colors.with_opacity(0.75, COLOR_PRIMARIO),
                 expand=True,
             ),
-            # Contenido principal centrado
+            
             ft.Container(
                 alignment=ft.alignment.center,
                 content=ft.Container(
                     content=ft.Column([
-                        # Logo/Icono
+                     
                         ft.Container(
                             content=ft.Icon(
                                 ft.Icons.APARTMENT,
@@ -95,7 +94,7 @@ def contactos(page):
                         
                         ft.Container(height=16),
                         
-                        # Título
+                   
                         ft.Column([
                             ft.Container(
                                 content=ft.Text(
@@ -126,7 +125,7 @@ def contactos(page):
                         
                         ft.Container(height=24),
                         
-                        # Información de contacto
+                        
                         ft.Column([
                             contacto_item(info) for info in contactos_info
                         ], 
@@ -136,7 +135,7 @@ def contactos(page):
                         
                         ft.Container(height=24),
                         
-                        # Footer info
+                       
                         ft.Container(
                             content=ft.Column([
                                 ft.Row([
@@ -172,4 +171,5 @@ def contactos(page):
                 )
             )
         ])
+
     )
