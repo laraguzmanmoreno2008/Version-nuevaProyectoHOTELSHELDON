@@ -1,18 +1,16 @@
 import flet as ft
 
 def sobre_nosotros(page):
-    # Colores del tema ultra moderno
-    COLOR_PRIMARIO = "#625956"  # Slate 900
-    COLOR_SECUNDARIO = "#475569"  # Slate 600
-    COLOR_ACENTO = "#d89c6c"  # Blue 500
-    COLOR_FONDO = "#ede8e4"  # Slate 50
-    COLOR_TEXTO = "#152540"  # Slate 950
+    COLOR_PRIMARIO = "#625956"  
+    COLOR_SECUNDARIO = "#475569"  
+    COLOR_ACENTO = "#d89c6c"
+    COLOR_FONDO = "#ede8e4" 
+    COLOR_TEXTO = "#152540"  
     COLOR_CARD = "#edebeb"
 
     return ft.Container(
         content=ft.Column(
             [
-                # Encabezado ultra moderno
                 ft.Container(
                     content=ft.Column([
                         ft.Container(
@@ -44,15 +42,13 @@ def sobre_nosotros(page):
                     padding=ft.padding.only(bottom=48, top=24),
                 ),
                 
-                # Contenido principal
                 ft.Row(
                     [
-                        # Columna izquierda - Texto
                         ft.Container(
                             content=ft.Column([
                                 ft.Container(
                                     content=ft.Column([
-                                        # Bienvenida
+                                        
                                         ft.Row([
                                             ft.Container(
                                                 content=ft.Icon(
@@ -85,7 +81,6 @@ def sobre_nosotros(page):
                                         
                                         ft.Container(height=24),
                                         
-                                        # Servicios con iconos modernos
                                         ft.Text(
                                             "Servicios Destacados",
                                             size=20,
@@ -156,7 +151,6 @@ def sobre_nosotros(page):
                                         
                                         ft.Container(height=24),
                                         
-                                        # Misión
                                         ft.Text(
                                             "Nuestra Misión",
                                             size=20,
@@ -177,7 +171,6 @@ def sobre_nosotros(page):
                                         
                                         ft.Container(height=24),
                                         
-                                        # Visión
                                         ft.Text(
                                             "Visión a Futuro",
                                             size=20,
@@ -198,7 +191,6 @@ def sobre_nosotros(page):
                                         
                                         ft.Container(height=24),
                                         
-                                        # Quote destacado
                                         ft.Container(
                                             content=ft.Column([
                                                 ft.Icon(ft.Icons.FORMAT_QUOTE, size=32, color=COLOR_ACENTO),
@@ -229,7 +221,6 @@ def sobre_nosotros(page):
                             height=700,
                         ),
                         
-                        # Columna derecha - Imagen
                         ft.Container(
                             content=ft.Column([
                                 ft.Container(
@@ -267,4 +258,5 @@ def sobre_nosotros(page):
         ),
         padding=48,
         bgcolor=COLOR_FONDO,
+
     )
