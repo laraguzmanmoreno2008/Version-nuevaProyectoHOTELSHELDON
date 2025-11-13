@@ -2,12 +2,11 @@ import flet as ft
 
 
 def servicios(page):
-    # Colores del tema ultra moderno
-    COLOR_PRIMARIO = "#625956"  # Slate 900
-    COLOR_SECUNDARIO = "#475569"  # Slate 600
-    COLOR_ACENTO = "#d89c6c"  # Blue 500
-    COLOR_FONDO = "#ede8e4"  # Slate 50
-    COLOR_TEXTO = "#152540"  # Slate 950
+    COLOR_PRIMARIO = "#625956" 
+    COLOR_SECUNDARIO = "#475569" 
+    COLOR_ACENTO = "#d89c6c" 
+    COLOR_FONDO = "#ede8e4" 
+    COLOR_TEXTO = "#152540"  
     COLOR_CARD = "#edebeb"
 
     servicios_data = [
@@ -162,7 +161,6 @@ def servicios(page):
 
     return ft.Container(
         content=ft.Column([
-            # Encabezado ultra moderno
             ft.Container(
                 content=ft.Column([
                     ft.Container(
@@ -194,7 +192,6 @@ def servicios(page):
                 padding=ft.padding.only(bottom=48, top=24),
             ),
 
-            # Sección de habitaciones
             ft.Container(
                 content=ft.Column([
                     ft.Row([
@@ -226,7 +223,6 @@ def servicios(page):
                 border=ft.border.all(1, ft.Colors.with_opacity(0.1, COLOR_TEXTO)),
             ),
 
-            # Servicios incluidos
             ft.Container(
                 content=ft.Column([
                     ft.Text(
@@ -259,4 +255,5 @@ def servicios(page):
         scroll=ft.ScrollMode.ALWAYS),
         padding=48,
         bgcolor=COLOR_FONDO,
+
     )
