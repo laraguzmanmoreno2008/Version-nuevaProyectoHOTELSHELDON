@@ -2,35 +2,34 @@ import flet as ft
 
 
 def inicio(page, go_to):
-    # Colores del tema ultra moderno
-    COLOR_PRIMARIO = "#625956"  # Slate 900
-    COLOR_ACENTO = "#d89c6c"  # Blue 500
+    COLOR_PRIMARIO = "#625956"  
+    COLOR_ACENTO = "#d89c6c"  
     COLOR_CARD = "#edebeb"
 
     return ft.Container(
         expand=True,
         content=ft.Stack([
-            # Imagen de fondo
+       
             ft.Image(
                 src="https://images.unsplash.com/photo-1566073771259-6a8506099945",
                 width=page.width,
                 height=page.height,
                 fit=ft.ImageFit.COVER
             ),
-            # Overlay oscuro dramático
+       
             ft.Container(
                 bgcolor=ft.Colors.with_opacity(0.65, COLOR_PRIMARIO),
                 width=page.width,
                 height=page.height
             ),
-            # Contenido principal
+            
             ft.Container(
                 alignment=ft.alignment.center,
                 expand=True,
                 content=ft.Column([
                     ft.Container(height=20),
                     
-                    # Título principal ultra moderno
+                   
                     ft.Text(
                         "HOTEL",
                         size=28,
@@ -50,7 +49,7 @@ def inicio(page, go_to):
                     
                     ft.Container(height=10),
                     
-                    # Subtítulo minimalista
+                
                     ft.Container(
                         content=ft.Text(
                             "Experiencia • Confort • Elegancia",
@@ -63,7 +62,7 @@ def inicio(page, go_to):
                         padding=ft.padding.only(bottom=40),
                     ),
                     
-                    # Botón CTA ultra moderno
+                 
                     ft.Container(
                         content=ft.ElevatedButton(
                             content=ft.Row([
@@ -91,7 +90,7 @@ def inicio(page, go_to):
                     
                     ft.Container(height=60),
                     
-                    # Stats modernos
+          
                     ft.Row([
                         ft.Column([
                             ft.Text("100+", size=32, weight="w700", color=COLOR_CARD),
@@ -121,4 +120,5 @@ def inicio(page, go_to):
                 spacing=0),
             )
         ])
+
     )
